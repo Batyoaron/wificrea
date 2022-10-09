@@ -216,7 +216,7 @@ while (count < 100000):
     url = "http://www.kite.com"
     try:
         request = requests.get(url, timeout=timeout)
-        print('password cracked with one of the last 15 password you see/or connected to the wifi')
+        print('password cracked with one of the last 10 password you see/or connected to the wifi')
         exit()
     except (requests.ConnectionError, requests.Timeout) as exception:
         print("still nothing")
