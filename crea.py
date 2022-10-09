@@ -1,3 +1,5 @@
+up = "2"
+
 import random
 import time
 import string
@@ -22,7 +24,8 @@ ascii_banner = pyfiglet.figlet_format("wificrea-py")
 print(ascii_banner)
 print("\033[1;33;40m \n")
 print('                                   by: BatyoAron')
-print('                                   update version: 2')
+print('                                   update version:' + up)
+if up == "2":print('')
 print("\033[1;32;40m \n")
 print('')
 print("\033[1;36;40m \n")
