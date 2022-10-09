@@ -5,3 +5,9 @@ wpa2 wifi cracker
     cd wificrea-py
 
 intsalling the tools
+
+    pip3 install -r requirements.txt
+    
+running the program
+
+    python3 crea.py
