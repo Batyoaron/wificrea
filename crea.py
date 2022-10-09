@@ -20,9 +20,26 @@ result_str = "password"
 print("\033[1;31;40m \n")
 ascii_banner = pyfiglet.figlet_format("wificrea-py")
 print(ascii_banner)
-print("\033[1;36;40m \n")
+print("\033[1;33;40m \n")
+print('                                   by: BatyoAron')
+print('                                   update version: 2')
+print("\033[1;32;40m \n")
 print('')
-print('dont forget to turn wifi on(no mobile wifi)')
+print("\033[1;36;40m \n")
+print('dont forget to turn wifi on (NO MOBILE WIFI)')
+import requests
+print('')
+url = "http://www.kite.com"
+timeout = 5
+try:
+	request = requests.get(url, timeout=timeout)
+	print("\033[1;31;40m \n")
+    
+	print("turn off the mobile net/ or disconnect from the wifi and try again")
+	exit()
+except (requests.ConnectionError, requests.Timeout) as exception:
+	print("\033[1;32;40m \n")
+	print("everything looks good")
 print('')
 print("\033[1;33;40m \n")
 # import module
@@ -196,7 +213,14 @@ while (count < 100000):
     time.sleep(1)
     print("\033[1;31;40m \n")
     print('wrong password')
-    
+    url = "http://www.kite.com"
+    try:
+        request = requests.get(url, timeout=timeout)
+        print('password cracked with one of the last 15 password you see/or connected to the wifi')
+        exit()
+    except (requests.ConnectionError, requests.Timeout) as exception:
+        print("still nothing")
+
 
 
     
@@ -207,4 +231,4 @@ while (count < 100000):
     
     
 print("\033[1;31;40m \n")
-print("password is too powerful to crack / the internet is not turned on ):")
+print("password is too powerful to crack / the internet is not turned on ):") 
