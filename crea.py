@@ -1,3 +1,4 @@
+#update version changer:
 up = "2"
 
 import random
@@ -25,7 +26,9 @@ print(ascii_banner)
 print("\033[1;33;40m \n")
 print('                                   by: BatyoAron')
 print('                                   update version:' + up)
-if up == "2":print('')
+if up =="2":print('')
+else:
+    print('new version is available')
 print("\033[1;32;40m \n")
 print('')
 print("\033[1;36;40m \n")
@@ -219,7 +222,7 @@ while (count < 100000):
     url = "http://www.kite.com"
     try:
         request = requests.get(url, timeout=timeout)
-        print('password cracked with one of the last 10 password you see/or connected to the wifi')
+        print('password cracked with one of the last 15 password you see/or connected to the wifi')
         exit()
     except (requests.ConnectionError, requests.Timeout) as exception:
         print("still nothing")
@@ -234,4 +237,5 @@ while (count < 100000):
     
     
 print("\033[1;31;40m \n")
-print("password is too powerful to crack / the internet is not turned on ):") 
+print("password is too powerful to crack / the internet is not turned on ):")
+
