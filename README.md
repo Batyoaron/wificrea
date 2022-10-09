@@ -11,3 +11,8 @@ intsalling the tools
 running the program
 
     python3 crea.py
+
+
+how it works?
+
+It generates random password with string, and it is gonna try connecting with the password that generated.
