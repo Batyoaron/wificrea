@@ -1,6 +1,11 @@
 # wificrea-py
 wpa2 wifi cracker
 
+    apt upgrade
+    apt update
+
+Download link
+
     git clone https://github.com/Batyoaron/wificrea-py
     cd wificrea-py
 
