@@ -1,5 +1,11 @@
 # wificrea-py
 
+Version: 3.0
+
+Whats new?
+
+You can use wordlist now
+
 
 
 wpa2 wifi cracker
@@ -9,8 +15,8 @@ wpa2 wifi cracker
 
 Download link
 
-    git clone https://github.com/Batyoaron/wificrea-py
-    cd wificrea-py
+    git clone https://github.com/Batyoaron/wificrea
+    cd wificrea
 
 intsalling the tools
 
