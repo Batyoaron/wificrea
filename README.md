@@ -1,4 +1,7 @@
 # wificrea-py
+
+
+
 wpa2 wifi cracker
 
     apt upgrade
@@ -20,7 +23,7 @@ running the program
 
 how it works?
 
-It generates random password with string, and it is gonna try connecting with the password that generated.
+It generates random password with string, and it is gonna try connecting with the password that generated. Or you can use wordlist.
 
 
 
